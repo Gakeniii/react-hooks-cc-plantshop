@@ -25,18 +25,17 @@ function App() {
       .then(json => setPlants([...plants, json]))
     }
 
-    // function handleDelete(plant){
-    //   fetch(`http://localhost:6001/plants/${plants.id}`, {
-    //     method: "DELETE",
-    //   })
-    //     .then((r) => r.json())
-    //     .then(() => setPlants(plant));
-    // }
+    const handleDelete = (id) => {
+      const updatedPlants = plants.filter((plant) => {
+        return plant.id !== id;
+      });
+      setPlants(updatedPlants);
+    };
 
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={plants} addNewPlant={addNewPlant}/>
+      <PlantPage plants={plants} addNewPlant={addNewPlant} onClickPlant={handleDelete}/>
     </div>
   );
 }

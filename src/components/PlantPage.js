@@ -4,14 +4,18 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 
-function PlantPage({plants, addNewPlant}) {
+function PlantPage({plants, addNewPlant, onClickPlant}) {
   const [searchTerm, setSearchTerm] = useState('');
+
+  const searchplants = plants.filter(
+    plant => plant.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
 
   return (
     <main>
       <NewPlantForm addNewPlant={addNewPlant}/>
       <Search handleSearch={setSearchTerm} />
-      <PlantList plants={plants.filter(plant => plant.name.toLocaleLowerCase().startsWith(searchTerm.toLocaleLowerCase()))}/>
+      <PlantList plants={searchplants} onClickPlant={onClickPlant}/>
     </main>
   );
 }

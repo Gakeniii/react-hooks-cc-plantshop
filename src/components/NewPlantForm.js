@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function NewPlantForm({addNewPlant}) {
   const [plant, setPlant] = useState({
-    name: '', image: '', price: 0,
+    name: '', image: '', price: '',
   })
 
   function handleChange(e){
@@ -12,7 +12,6 @@ function NewPlantForm({addNewPlant}) {
   function handleSubmit(e){
     e.preventDefault();
     addNewPlant(plant); 
-    reset()
   };
 
   return (
