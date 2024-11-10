@@ -59,6 +59,12 @@
       "image": "https://www.planetnatural.com/wp-content/uploads/2023/11/Pink-carnation-flowers-focus-shot.jpg",
       "price": "34.59",
       "id": 11
+    },
+    {
+      "name": "Big Tree",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrWGnkEWaaNZjJTYAVRWZwi1ehw0muzeOnwg&s",
+      "price": "45.98",
+      "id": 12
     }
   ]
 }

@@ -12,6 +12,7 @@ function NewPlantForm({addNewPlant}) {
   function handleSubmit(e){
     e.preventDefault();
     addNewPlant(plant); 
+    setPlant({ name: '', image: '', price: '' });
   };
 
   return (
