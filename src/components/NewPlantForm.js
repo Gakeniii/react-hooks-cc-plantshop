@@ -5,6 +5,7 @@ function NewPlantForm({addNewPlant}) {
     name: '', image: '', price: '',
   })
 
+  
   function handleChange(e){
     setPlant({...plant, [e.target.name]: e.target.value})
   }
