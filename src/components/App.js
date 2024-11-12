@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import PlantPage from "./PlantPage";
 
-const plantAPI = 'http://localhost:6001/plants'
+const plantAPI = 'https://my-json-server.typicode.com/Gakeniii/react-hooks-cc-plantshop/plants'
 
 function App() {
   const [plants, setPlants] = useState([]);
